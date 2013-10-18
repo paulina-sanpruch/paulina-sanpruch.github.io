@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/portfolio.css">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="/bootstrap/assets/js/html5shiv.js"></script>
+          <script src="/bootstrap/assets/js/respond.min.js"></script>
+        <![endif]-->
 
     </head>
     <body>
-
-        <div class="site">
-          <div class="header">
+        <div class="container">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+            <div class="row">
+              <div class="col-md-2">
+                  <ul class="nav nav-stacked">
+                     <li>
+                         <a class="#graphics">Graphics</a>
+                         <ul class="nav nav-stacked">
+                            <li><a href="#illustrations">Illustrations</a></li>
+                            <li><a href="#characters">Characters</a></li>
+                         </ul>
 
-          {{ content }}
+                     </li>
+                     <li><a class="#!art">Art</a></li>
+                  </ul>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+              </div>
+              <div class="col-md-10">{{ content }}</div>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+
+
+
         </div>
 
+        <script src="//code.jquery.com/jquery.js"></script>
+       <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="/js/angular.js"></script>
+        <script src="/js/portfolio.js"></script>
     </body>
 </html>

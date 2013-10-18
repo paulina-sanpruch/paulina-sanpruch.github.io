@@ -1,7 +1,8 @@
-name: Your New Jekyll Site
+name: Paulina Sanpruch - Portfolio
 safe: true
 lsi: false
 pygments: true
 markdown: redcarpet
+exclude: ['bootstrap/node_modules', 'node_modules']
 
 

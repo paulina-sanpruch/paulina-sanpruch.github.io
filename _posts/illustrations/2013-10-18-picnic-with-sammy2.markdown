@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Picnic with sammy"
+date:   2013-10-18 20:21:00
+categories: illustrations
+thumbnail: illustrations/picnicWithSammy2.jpg
+image: illustrations/picnicWithSammy2.jpg
+---
+

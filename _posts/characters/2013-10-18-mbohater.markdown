@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "M Bohater"
+date:   2013-10-18 20:29:00
+categories: characters
+thumbnail: characters/mbohater.jpg
+image: characters/mbohater.jpg
+---
+
