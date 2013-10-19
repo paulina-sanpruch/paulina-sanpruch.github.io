@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Picnic with sammy"
+title:  "Jesus on the cross"
 date:   2013-10-18 20:20:00
 categories: ['oil']
-image: illustrations/picnicWithSammy.jpg
+image: oil/jesusOnTheCross.jpg
 ---
 
