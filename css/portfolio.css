@@ -1,9 +1,53 @@
 
+html {
+    background: url(/images/site/bg.jpg) repeat;
+}
+
+body {
+    background: url(/images/site/podarcie.png)  top center no-repeat;
+    padding-top: 50px;
+}
+
+header {
+    position: relative;
+}
+
+#pen {
+    position: absolute;
+    top: -130px;
+    left: 318px;
+}
+
+#content {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: white;
+    padding: 15px
+}
+
+.posts {
+  -webkit-column-count: 3;
+  -webkit-column-gap:   10px;
+  -moz-column-count:    3;
+  -moz-column-gap:      10px;
+  column-count:         3;
+  column-gap:           10px;
+}
 
 .post-item {
-    width: 33%;
+  /*  width: 32%;*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    border: 6px solid #c2c2c2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+  /*  margin: 0.5%;*/
+}
+
+.post-item-content {
 
 }
+

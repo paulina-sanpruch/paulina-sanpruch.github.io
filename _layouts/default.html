@@ -17,7 +17,12 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+            <header>
+                <h1><a href="/"><img id="signature" title="{{ site.name }}" src="/images/site/signature.png"></a>
+                                <img id="pen" src="/images/site/pen.png" />
+
+                </h1>
+            </header>
             <div class="row">
               <div class="col-md-2">
                   <ul class="nav nav-stacked">
@@ -33,7 +38,20 @@
                   </ul>
 
               </div>
-              <div class="col-md-10">{{ content }}</div>
+              <div class="col-md-10">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Messages</a></li>
+                </ul>
+                <div id="content">
+                                      {{ content }}
+                </div>
+
+
+
+
+              </div>
             </div>
 
 

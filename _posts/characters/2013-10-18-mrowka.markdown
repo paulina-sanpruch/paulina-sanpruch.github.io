@@ -3,7 +3,6 @@ layout: post
 title:  "Incredible Ant"
 date:   2013-10-18 20:29:00
 categories: characters
-thumbnail: characters/mrowka.jpg
 image: characters/mrowka.jpg
 ---
 
