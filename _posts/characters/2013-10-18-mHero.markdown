@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "M Bohater"
+title:  "M Hero"
 date:   2013-10-18 20:29:00
 categories: ['characters']
-image: characters/mbohater.jpg
+image: characters/mHero.jpg
 ---
 
