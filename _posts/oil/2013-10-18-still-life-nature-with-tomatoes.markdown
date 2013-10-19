@@ -6,3 +6,4 @@ categories: ['oil']
 image: oil/stillLifeNatureWithTomatoes.jpg
 image_width: 500
 image_height: 667
+---

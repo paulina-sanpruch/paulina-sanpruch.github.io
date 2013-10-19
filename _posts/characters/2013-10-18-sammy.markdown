@@ -4,5 +4,6 @@ title:  "Sammy"
 date:   2013-10-18 20:29:00
 categories: ['characters']
 image: characters/sammy.jpg
+image_width: 353
+image_height: 522
 ---
-

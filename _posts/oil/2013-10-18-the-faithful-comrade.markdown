@@ -6,3 +6,4 @@ categories: ['oil']
 image: oil/theFaithfulComrade.jpg
 image_width: 689
 image_height: 500
+---

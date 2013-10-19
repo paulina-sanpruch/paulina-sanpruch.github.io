@@ -6,3 +6,4 @@ categories: ['oil']
 image: oil/jesusOnTheCross.jpg
 image_width: 496
 image_height: 714
+---
