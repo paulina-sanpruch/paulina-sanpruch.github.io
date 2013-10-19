@@ -3,20 +3,20 @@ layout: default
 title: Paulina Sanpruch - Portfolio
 ---
 
+<div class="ng-view">
 
-  <ul class="posts list-inline" ng-controller="Posts">
-      {% comment %}
+</div>
 
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo;<img src="/images/{{ post.thumbnail }}"> <a href="{{ post.url }}">{{ post.title }}</a></li>
-
-    {% endfor %}
-       {% endcomment %}
+<script type="text/ng-template" id="posts">
 
 
-        <li class="post-item" ng-repeat="post in posts">
-           <img ng-src="/images/{[ post.image ]}" class="img-responsive" title="{[ post.title ]}">
-        </li>
+    <section ng-repeat="category in posts">
+        <h3>{[ category.name ]}</h3>
 
-
-  </ul>
+        <ul class="posts list-inline">
+            <li class="post-item" ng-repeat="post in category.posts">
+               <img ng-src="/images/{[ post.image ]}" class="img-responsive" title="{[ post.title ]}">
+            </li>
+        </ul>
+    </section>
+</script>

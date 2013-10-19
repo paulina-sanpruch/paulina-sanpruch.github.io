@@ -17,12 +17,14 @@
     </head>
     <body>
         <div class="container">
-            <header>
-                <h1><a href="/"><img id="signature" title="{{ site.name }}" src="/images/site/signature.png"></a>
-                                <img id="pen" src="/images/site/pen.png" />
+            <div class="row">
+                <header class="col-md-12">
+                    <h1><a href="/"><img id="signature" title="{{ site.name }}" src="/images/site/signature.png"></a>
+                                    <img id="pen" src="/images/site/pen.png" />
 
-                </h1>
-            </header>
+                    </h1>
+                </header>
+            </div>
             <div class="row">
               <div class="col-md-2">
                   <ul class="nav nav-stacked">
@@ -40,17 +42,13 @@
               </div>
               <div class="col-md-10">
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Messages</a></li>
+                  <li><a href="/about-me.html">about me</a></li>
+                  <li class="active"><a href="/">portfolio</a></li>
+                  <li><a href="/contact.html">contact</a></li>
                 </ul>
                 <div id="content">
-                                      {{ content }}
+                    {{ content }}
                 </div>
-
-
-
-
               </div>
             </div>
 
@@ -61,6 +59,7 @@
         <script src="//code.jquery.com/jquery.js"></script>
        <!-- <script src="js/bootstrap.min.js"></script> -->
         <script src="/js/angular.js"></script>
+        <script src="/js/angular-route.js"></script>
         <script src="/js/portfolio.js"></script>
     </body>
 </html>
