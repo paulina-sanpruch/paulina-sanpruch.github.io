@@ -15,6 +15,11 @@ title: Paulina Sanpruch - Portfolio
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
+               <div class="post-item-overlay">
+                   <div class="post-item-title-wrap">
+                        <h6>{[ post.title ]}</h6>
+                   </div>
+               </div>
                <img ng-src="/images/{[ post.image ]}" class="img-responsive" title="{[ post.title ]}">
             </li>
         </ul>

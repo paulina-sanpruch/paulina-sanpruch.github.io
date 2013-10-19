@@ -15,7 +15,7 @@ header {
 #pen {
     position: absolute;
     top: -130px;
-    left: 318px;
+    left: 328px;
 }
 
 #content {
@@ -55,9 +55,28 @@ h3 {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
   /*  margin: 0.5%;*/
+    position: relative;
 }
 
-.post-item-content {
+.post-item-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
 
+.post-item-title-wrap {
+    display: table;
+    width: 100%;
+    height: inherit;
+}
+
+h6 {
+    display: table-cell;
+    color: white;
+    font-weight: normal;
+    vertical-align: middle;
 }
 
