@@ -18,45 +18,56 @@
     <body>
         <div class="container">
             <div class="row">
-                <header class="col-md-12">
-                    <h1><a href="/"><img id="signature" title="{{ site.name }}" src="/images/site/signature.png"></a>
-                                    <img id="pen" src="/images/site/pen.png" />
-
-                    </h1>
-                </header>
-            </div>
-            <div class="row">
               <div class="col-md-2">
-                  <ul class="nav nav-stacked">
-                     <li>
-                         <a class="#illustrations">Graphics</a>
-                         <ul class="nav nav-stacked">
-                            <li><a href="#illustrations">Illustrations</a></li>
-                            <li><a href="#characters">Characters</a></li>
-                            <li><a href="#comics">Comics</a></li>
-                         </ul>
+                  <nav data-spy="affix" data-offset-top="100">
+                      <div class="nav-logo">
+                        <a href="/" title="{{ site.name }}">
+                            <img alt="Paulina" src="/images/site/firstname.png">
+                        </a>
+                      </div>
+                      <div class="nav-logo" id="nav-lastname">
+                        <a href="/" title="{{ site.name }}">
+                            <img alt="Paulina" src="/images/site/lastname.png">
+                        </a>
+                      </div>
+                      <ul class="menu">
+                         <li>
+                             <a href="#illustrations">Graphics</a>
+                             <ul>
+                                <li><a href="#illustrations">Illustrations</a></li>
+                                <li><a href="#characters">Characters</a></li>
+                                <li><a href="#comics">Comics</a></li>
+                             </ul>
 
-                     </li>
-                     <li>
-                         <a class="#art">Art</a>
-                         <ul class="nav nav-stacked">
-                            <li><a href="#oil">Oil</a></li>
-                            <li><a href="#watercolor">Watercolor</a></li>
-                            <li><a href="#pastel">Pastel</a></li>
-                            <li><a href="#ink">Ink</a></li>
-                            <li><a href="#draw">Draw</a></li>
-                         </ul>
-                     </li>
-                     <li>
-                         <a class="#architecture">Architecture</a>
-                     </li>
-                     <li>
-                         <a class="#technical">Technical drawings</a>
-                     </li>
-                  </ul>
+                         </li>
+                         <li>
+                             <a href="#art">Art</a>
+                             <ul>
+                                <li><a href="#oil">Oil</a></li>
+                                <li><a href="#watercolor">Watercolor</a></li>
+                                <li><a href="#pastel">Pastel</a></li>
+                                <li><a href="#ink">Ink</a></li>
+                                <li><a href="#draw">Draw</a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a class="#architecture">Architecture</a>
+                         </li>
+                         <li>
+                             <a class="#technical">Technical drawings</a>
+                         </li>
+                      </ul>
+                  </nav>
+
 
               </div>
               <div class="col-md-10">
+                  <div>
+                        <a href="/" title="{{ site.name }}">
+                            <img alt="Sanpruch" src="/images/site/lastname.png">
+                        </a>
+                        <img id="pen" src="/images/site/pen.png" />
+                  </div>
                 <ul class="nav nav-tabs">
                   <li class="{% if page.tab == 'about' %}active{% endif %}"><a href="/about-me.html">about me</a></li>
                   <li class="{% if page.tab == 'portfolio' %}active{% endif %}"><a href="/">portfolio</a></li>
@@ -73,7 +84,7 @@
         </div>
 
         <script src="//code.jquery.com/jquery.js"></script>
-       <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="/bootstrap/js/affix.js"></script>
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/portfolio.js"></script>
