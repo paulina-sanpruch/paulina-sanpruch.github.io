@@ -47,6 +47,7 @@ h3 {
 
 .post-item {
   /*  width: 32%;*/
+
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -55,28 +56,50 @@ h3 {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
   /*  margin: 0.5%;*/
+
+    padding: 0 !important;
+    margin: 10px 0;
+
+}
+
+.post-item-content {
+    text-align: center;
     position: relative;
 }
 
 .post-item-overlay {
+    opacity: 0;
     position: absolute;
+    background-color: rgba(150,150,150,0.9);
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(0,0,0,0.4);
+    /* enable animations once https://code.google.com/p/chromium/issues/detail?id=177556 is resolved */
+    /*-webkit-transition: opacity 0.4s ease-in-out;*/
+    /*-moz-transition: opacity 0.4s ease-in-out;*/
+    /*-o-transition: opacity 0.4s ease-in-out;*/
+    /*transition: opacity 0.4s ease-in-out;*/
 }
 
-.post-item-title-wrap {
-    display: table;
-    width: 100%;
-    height: inherit;
-}
-
-h6 {
-    display: table-cell;
+h4 {
     color: white;
-    font-weight: normal;
     vertical-align: middle;
+    text-align: center;
+    font-weight: normal;;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+
+    padding: 5px 0 20px 0;
 }
+
+.post-item:hover .post-item-overlay {
+    opacity: 1;
+}
+
+
+
 

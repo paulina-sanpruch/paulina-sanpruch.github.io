@@ -2,26 +2,22 @@
 layout: default
 title: Paulina Sanpruch - Portfolio
 ---
-
-<div class="ng-view">
-
-</div>
-
-<script type="text/ng-template" id="posts">
-
+<div  ng-controller="Posts">
 
     <section ng-repeat="category in posts">
-        <h3>{[ category.name ]}</h3>
+        <h3 id="{[ category.name ]}">{[ category.name ]}</h3>
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
-               <div class="post-item-overlay">
-                   <div class="post-item-title-wrap">
-                        <h6>{[ post.title ]}</h6>
-                   </div>
-               </div>
-               <img ng-src="/images/{[ post.image ]}" class="img-responsive" title="{[ post.title ]}">
+
+                <div class="post-item-content">
+                    <div class="post-item-overlay">
+                         <h4>{[ post.title ]}</h4>
+                    </div>
+                    <img ng-src="/images/{[ post.image ]}" class="img-responsive" >
+                </div>
+
             </li>
         </ul>
     </section>
-</script>
+</div>
