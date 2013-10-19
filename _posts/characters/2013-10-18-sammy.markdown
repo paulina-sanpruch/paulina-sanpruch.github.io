@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Sammy"
+date:   2013-10-18 20:29:00
+categories: ['characters']
+image: characters/sammy.jpg
+---
+
