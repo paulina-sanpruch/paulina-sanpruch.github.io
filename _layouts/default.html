@@ -58,9 +58,9 @@
               </div>
               <div class="col-md-10">
                 <ul class="nav nav-tabs">
-                  <li><a href="/about-me.html">about me</a></li>
-                  <li class="active"><a href="/">portfolio</a></li>
-                  <li><a href="/contact.html">contact</a></li>
+                  <li class="{% if page.tab == 'about' %}active{% endif %}"><a href="/about-me.html">about me</a></li>
+                  <li class="{% if page.tab == 'portfolio' %}active{% endif %}"><a href="/">portfolio</a></li>
+                  <li class="{% if page.tab == 'contact' %}active{% endif %}"><a href="/contact.html">contact</a></li>
                 </ul>
                 <div id="content">
                     {{ content }}
