@@ -39,33 +39,33 @@
                                 <li><a href="/#watercolor">watercolor</a></li>
                                 <li><a href="/#pastel">pastel</a></li>
                                 <li><a href="/#ink">ink</a></li>
-                                <li><a href="/#draw">draw</a></li>
+                                <li><a href="/#pencil">pencil</a></li>
                              </ul>
                          </li>
                          <li>
                              <a class="#architecture">architecture</a>
                          </li>
                          <li>
-                             <a class="#technical">technical drawings</a>
+                             <a class="#technical">technical <span class="hidden-xs">drawings</span></a>
                          </li>
                       </ul>
                   </nav>
 
 
               </div>
-              <div class="col-sm-10">
-                  <div>
-                        <a href="/" title="{{ site.name }}">
-                            <img alt="Sanpruch" src="/images/site/lastname.png">
-                        </a>
-                        <img id="pen" src="/images/site/pen.png" />
-                  </div>
+              <div id="content" class="col-sm-10">
+                  <!--<div>-->
+                        <!--<a href="/" title="{{ site.name }}">-->
+                            <!--<img alt="Sanpruch" src="/images/site/lastname.png">-->
+                        <!--</a>-->
+                        <!--<img id="pen" src="/images/site/pen.png" />-->
+                  <!--</div>-->
                 <ul class="nav nav-tabs">
                   <li class="{% if page.tab == 'about' %}active{% endif %}"><a href="/about-me.html">about me</a></li>
                   <li class="{% if page.tab == 'portfolio' %}active{% endif %}"><a href="/">portfolio</a></li>
                   <li class="{% if page.tab == 'contact' %}active{% endif %}"><a href="/contact.html">contact</a></li>
                 </ul>
-                <div id="content">
+                <div id="tab-content">
                     {{ content }}
                 </div>
               </div>

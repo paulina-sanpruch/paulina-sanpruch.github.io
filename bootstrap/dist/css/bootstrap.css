@@ -752,7 +752,7 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .container {
     padding-right: 0;
     padding-left: 0;
@@ -921,9 +921,6 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 750px;
-  }
   .col-sm-1,
   .col-sm-2,
   .col-sm-3,
@@ -1075,9 +1072,6 @@ pre code {
 }
 
 @media (min-width: 992px) {
-  .container {
-    max-width: 970px;
-  }
   .col-md-1,
   .col-md-2,
   .col-md-3,
@@ -6838,6 +6832,10 @@ header {
 }
 
 #content {
+  padding-top: 90px;
+}
+
+#tab-content {
   padding: 15px;
   background: white;
   border-right: 1px solid #ddd;
@@ -6957,27 +6955,44 @@ h4 {
   text-decoration: underline;
 }
 
-nav.affix {
-  top: 40px;
-}
-
-.affix #nav-lastname {
-  opacity: 1;
-}
-
 .nav-logo {
+  position: relative;
   display: block;
   height: 98px;
+  margin-right: -100px;
 }
 
 #nav-firstname {
-  background: url(/images/site/firstname.png) top right no-repeat;
+  left: 20px;
+  width: 149px;
+  background: url(/images/site/firstname.png);
 }
 
 #nav-lastname {
-  margin-top: -50px;
-  background: url(/images/site/lastname.png) top left no-repeat;
-  opacity: 0;
+  top: -98px;
+  left: 155px;
+  width: 189px;
+  background: url(/images/site/lastname.png);
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #nav-lastname {
+    top: -50px;
+    left: 10px;
+  }
+}
+
+.affix #nav-lastname {
+  top: -50px;
+  left: 10px;
+}
+
+@media (min-width: 992px) {
+  .affix #nav-lastname {
+    left: 40px;
+  }
 }
 
 .sidebar {
