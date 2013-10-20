@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Adaptation of old mill"
+date:   2013-10-19 03:15:00
+categories: ['architecture']
+image: architecture/adaptationOfOldMill2.jpg
+image_width: 500
+image_height: 686
+---
+
