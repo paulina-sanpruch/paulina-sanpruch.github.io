@@ -70,7 +70,7 @@ h3 {
 .post-item-overlay {
     opacity: 0;
     position: absolute;
-    background-color: rgba(150,150,150,0.9);
+    background-color: rgba(150,150,150,0.8);
     left: 0;
     right: 0;
     bottom: 0;
@@ -92,7 +92,6 @@ h4 {
     left: 0;
     width: 100%;
     margin: 0;
-
     padding: 5px 0 20px 0;
 }
 
@@ -110,31 +109,34 @@ h4 {
     font-weight: bold;
 }
 
-.menu li ul li {
+
+.menu {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 3.2;
     text-align: right;
 }
 
-.affix #nav-lastname {
-    opacity: 1;
-
+.menu ul {
+   line-height: 1.6;
 }
 
-nav {
 
+.menu a,.menu a:active, .menu a:visited {
+    color: black;
 }
 
-.menu {
-    padding-top: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+.menu a:hover {
+    text-decoration: underline;
 }
 
 nav.affix {
     top: 40px;
 }
 
-nav.affix .menu {
-
+.affix #nav-lastname {
+    opacity: 1;
 }
 
 .nav-logo {
@@ -150,11 +152,6 @@ nav.affix .menu {
     background: url(/images/site/lastname.png) top left no-repeat;
     opacity: 0;
     margin-top: -50px;
-
-    /*-webkit-transition: opacity 0.4s ease-in-out;*/
-    /*-moz-transition: opacity 0.4s ease-in-out;*/
-    /*-o-transition: opacity 0.4s ease-in-out;*/
-    /*transition: opacity 0.4s ease-in-out;*/
 }
 
 .sidebar {
