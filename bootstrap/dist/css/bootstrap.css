@@ -6264,7 +6264,7 @@ td.visible-xs {
 
 @media (max-width: 767px) {
   .visible-xs {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-xs {
     display: table-row !important;
@@ -6277,7 +6277,7 @@ td.visible-xs {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-xs.visible-sm {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-xs.visible-sm {
     display: table-row !important;
@@ -6290,7 +6290,7 @@ td.visible-xs {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-xs.visible-md {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-xs.visible-md {
     display: table-row !important;
@@ -6303,7 +6303,7 @@ td.visible-xs {
 
 @media (min-width: 1200px) {
   .visible-xs.visible-lg {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-xs.visible-lg {
     display: table-row !important;
@@ -6329,7 +6329,7 @@ td.visible-sm {
 
 @media (max-width: 767px) {
   .visible-sm.visible-xs {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-sm.visible-xs {
     display: table-row !important;
@@ -6342,7 +6342,7 @@ td.visible-sm {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-sm {
     display: table-row !important;
@@ -6355,7 +6355,7 @@ td.visible-sm {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-sm.visible-md {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-sm.visible-md {
     display: table-row !important;
@@ -6368,7 +6368,7 @@ td.visible-sm {
 
 @media (min-width: 1200px) {
   .visible-sm.visible-lg {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-sm.visible-lg {
     display: table-row !important;
@@ -6394,7 +6394,7 @@ td.visible-md {
 
 @media (max-width: 767px) {
   .visible-md.visible-xs {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-md.visible-xs {
     display: table-row !important;
@@ -6407,7 +6407,7 @@ td.visible-md {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-md.visible-sm {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-md.visible-sm {
     display: table-row !important;
@@ -6420,7 +6420,7 @@ td.visible-md {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-md {
     display: table-row !important;
@@ -6433,7 +6433,7 @@ td.visible-md {
 
 @media (min-width: 1200px) {
   .visible-md.visible-lg {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-md.visible-lg {
     display: table-row !important;
@@ -6459,7 +6459,7 @@ td.visible-lg {
 
 @media (max-width: 767px) {
   .visible-lg.visible-xs {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-lg.visible-xs {
     display: table-row !important;
@@ -6472,7 +6472,7 @@ td.visible-lg {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-lg.visible-sm {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-lg.visible-sm {
     display: table-row !important;
@@ -6485,7 +6485,7 @@ td.visible-lg {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-lg.visible-md {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-lg.visible-md {
     display: table-row !important;
@@ -6498,7 +6498,7 @@ td.visible-lg {
 
 @media (min-width: 1200px) {
   .visible-lg {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-lg {
     display: table-row !important;
@@ -6510,7 +6510,7 @@ td.visible-lg {
 }
 
 .hidden-xs {
-  display: block !important;
+  display: inherit !important;
 }
 
 tr.hidden-xs {
@@ -6575,7 +6575,7 @@ td.hidden-xs {
 }
 
 .hidden-sm {
-  display: block !important;
+  display: inherit !important;
 }
 
 tr.hidden-sm {
@@ -6640,7 +6640,7 @@ td.hidden-sm {
 }
 
 .hidden-md {
-  display: block !important;
+  display: inherit !important;
 }
 
 tr.hidden-md {
@@ -6705,7 +6705,7 @@ td.hidden-md {
 }
 
 .hidden-lg {
-  display: block !important;
+  display: inherit !important;
 }
 
 tr.hidden-lg {
@@ -6784,7 +6784,7 @@ td.visible-print {
 
 @media print {
   .visible-print {
-    display: block !important;
+    display: inherit !important;
   }
   tr.visible-print {
     display: table-row !important;
