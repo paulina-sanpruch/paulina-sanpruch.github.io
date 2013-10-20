@@ -162,3 +162,11 @@ nav.affix .menu {
 }
 
 
+#corner {
+    position: fixed;
+    bottom: -23px;
+    left: -20px;
+    width: 248px;
+    height: 280px;
+    background: url(/images/site/corner.png);
+}
