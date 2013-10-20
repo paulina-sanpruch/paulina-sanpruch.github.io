@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Incredible Ant"
-date:   2013-10-18 20:29:00
+date:   2013-10-18 20:31:00
 categories: ['characters']
 image: characters/mrowka.jpg
 image_width: 400

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "M Hero"
-date:   2013-10-18 20:29:00
+date:   2013-10-18 20:32:00
 categories: ['characters']
 image: characters/mHero.jpg
 image_width: 400
