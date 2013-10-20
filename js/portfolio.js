@@ -29,4 +29,16 @@ angular.module('portfolio', ['ngRoute']).
 
         //$anchorScroll();
     }).
-    directive;
+    directive('proportionalHeight', function() {
+        return function(scope, element, attrs) {
+            console.log('dir found');
+            function update(ratio) {
+                var width = element.width(), height = width / ratio;
+                element.css('height', height + 'px');
+            }
+
+            scope.$watch(attrs.proportionalHeight, function(ratio) {
+                update(ratio);
+            });
+        }
+    });

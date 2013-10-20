@@ -11,6 +11,8 @@
               "slug": "{{ post.id | remove:'/' }}",
               "title": "{{ post.title }}",
               "image": "{{ post.image }}",
+              "image_height": {{ post.image_height }},
+              "image_width": {{ post.image_width }},
               "published_on": "{{ post.date }}",
               "excerpt": "{{ post.content | strip_html | strip_newlines | truncatewords: 55 }}",
               "tags": "{% for tag in post.tags %}{{ tag }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}",

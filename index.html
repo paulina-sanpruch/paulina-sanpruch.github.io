@@ -11,7 +11,7 @@ tab: portfolio
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
 
-                <div class="post-item-content">
+                <div class="post-item-content" proportional-height="post.image_width/post.image_height">
                     <div class="post-item-overlay">
                          <h4>{[ post.title ]}</h4>
                     </div>
