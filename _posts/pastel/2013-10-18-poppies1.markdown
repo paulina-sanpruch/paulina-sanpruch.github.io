@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Poppies 3"
+title:  "Poppies 1"
 date:   2013-10-18 20:20:00
-categories: ['pastell']
-image: pastell/poppies3.jpg
+categories: ['pastel']
+image: pastel/poppies1.jpg
 image_width: 667
 image_height: 500
 ---
