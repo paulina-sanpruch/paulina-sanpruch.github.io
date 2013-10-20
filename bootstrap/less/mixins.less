@@ -526,6 +526,12 @@
   margin-left: auto;
   padding-left:  (@grid-gutter-width / 2);
   padding-right: (@grid-gutter-width / 2);
+
+  @media (min-width: @screen-sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .clearfix();
 }
 

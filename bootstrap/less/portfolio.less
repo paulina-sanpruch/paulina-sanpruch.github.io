@@ -13,9 +13,13 @@ header {
 }
 
 #pen {
+  display: none;
+  @media (min-width: @screen-sm) {
+    display: block;
     position: absolute;
     top: -130px;
     left: 328px;
+  }
 }
 
 #content {
@@ -36,14 +40,6 @@ h3 {
     letter-spacing: 1px;
 }
 
-.posts {
-  -webkit-column-count: 3;
-  -webkit-column-gap:   10px;
-  -moz-column-count:    3;
-  -moz-column-gap:      10px;
-  column-count:         3;
-  column-gap:           10px;
-}
 
 .post-item {
   /*  width: 32%;*/
@@ -62,7 +58,8 @@ h3 {
 
 }
 
-.post-item-content {
+.post-item-content, .post-item-content:visited {
+    display: block;
     text-align: center;
     position: relative;
     box-sizing: content-box;
@@ -106,6 +103,15 @@ h4 {
     list-style-type: none;
     list-style-position: inside;
     padding: 0;
+  @media (max-width: @screen-sm) {
+    display: block;
+  }
+}
+
+.menu li {
+  @media (max-width: @screen-sm) {
+    display: inline;
+  }
 }
 
 .menu > li > a {
@@ -119,6 +125,9 @@ h4 {
     padding-right: 15px;
     line-height: 3.2;
     text-align: right;
+  @media (min-width: @screen-sm) {
+    padding-top: 40px;
+  }
 }
 
 .menu ul {
@@ -163,10 +172,35 @@ nav.affix {
 
 
 #corner {
+  display: none;
+
+  @media (min-width: @screen-sm) {
+    display: block;
     position: fixed;
     bottom: -23px;
     left: -20px;
     width: 248px;
     height: 280px;
     background: url(/images/site/corner.png);
+  }
+}
+
+.slideshow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 6px solid #c2c2c2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.posts {
+
+  @media (min-width: @screen-xs) and (max-width: @screen-sm-max) {
+    .content-columns(2, 10px);
+  }
+  @media (min-width: @screen-md){
+    .content-columns(3, 10px);
+  }
 }

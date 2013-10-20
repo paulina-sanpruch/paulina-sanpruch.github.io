@@ -752,6 +752,13 @@ pre code {
   margin-left: auto;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .container:before,
 .container:after {
   display: table;
@@ -6801,5 +6808,226 @@ td.visible-print {
   th.hidden-print,
   td.hidden-print {
     display: none !important;
+  }
+}
+
+html {
+  background: url(/images/site/bg.jpg) repeat;
+}
+
+body {
+  padding-top: 50px;
+  background: url(/images/site/podarcie.png) top center no-repeat;
+}
+
+header {
+  position: relative;
+}
+
+#pen {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #pen {
+    position: absolute;
+    top: -130px;
+    left: 328px;
+    display: block;
+  }
+}
+
+#content {
+  padding: 15px;
+  background: white;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  background: #bbb;
+}
+
+.post-item {
+  width: 100%;
+  padding: 0 !important;
+  margin: 10px 0;
+  border: 6px solid #c2c2c2;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.post-item-content,
+.post-item-content:visited {
+  position: relative;
+  display: block;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.post-item-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(150, 150, 150, 0.8);
+  opacity: 0;
+}
+
+h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0 20px 0;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.post-item:hover .post-item-overlay {
+  opacity: 1;
+}
+
+.menu,
+.menu ul {
+  padding: 0;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+@media (max-width: 768px) {
+  .menu,
+  .menu ul {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu li {
+    display: inline;
+  }
+}
+
+.menu > li > a {
+  font-weight: bold;
+}
+
+.menu {
+  padding-top: 40px;
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 3.2;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    padding-top: 40px;
+  }
+}
+
+.menu ul {
+  line-height: 1.6;
+}
+
+.menu a,
+.menu a:active,
+.menu a:visited {
+  color: black;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+nav.affix {
+  top: 40px;
+}
+
+.affix #nav-lastname {
+  opacity: 1;
+}
+
+.nav-logo {
+  display: block;
+  height: 98px;
+}
+
+#nav-firstname {
+  background: url(/images/site/firstname.png) top right no-repeat;
+}
+
+#nav-lastname {
+  margin-top: -50px;
+  background: url(/images/site/lastname.png) top left no-repeat;
+  opacity: 0;
+}
+
+.sidebar {
+  padding: 0;
+}
+
+#corner {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #corner {
+    position: fixed;
+    bottom: -23px;
+    left: -20px;
+    display: block;
+    width: 248px;
+    height: 280px;
+    background: url(/images/site/corner.png);
+  }
+}
+
+.slideshow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 6px solid #c2c2c2;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+@media (min-width: 480px) and (max-width: 991px) {
+  .posts {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .posts {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
   }
 }

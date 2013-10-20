@@ -18,20 +18,21 @@ angular.module('portfolio', ['ngRoute']).
     controller('Posts', function($scope, $http, $routeParams) {
         //$scope.posts = posts.data;
 
-            $http({method: 'GET', url: '/posts.json'}).
-                            success(function(data, status, headers, config) {
-                              // console.log(data);
-                                $scope.posts = data;
-                            }).
-                            error(function(data, status, headers, config) {
-                                alert('We are sorry. Could not load portfolio. Please try again by refreshing the page.')
-                            });
+        $http({method: 'GET', url: '/posts.json'}).
+            success(function(data, status, headers, config) {
+              // console.log(data);
+                $scope.posts = data;
+            }).
+            error(function(data, status, headers, config) {
+                alert('We are sorry. Could not load portfolio. Please try again by refreshing the page.')
+            });
 
-        //$anchorScroll();
+        $scope.show = function(post) {
+            $scope.shown = post;
+        }
     }).
     directive('proportionalHeight', function() {
         return function(scope, element, attrs) {
-            console.log('dir found');
             function update(ratio) {
                 var width = element.width(), height = width / ratio;
                 element.css('height', height + 'px');
@@ -40,5 +41,7 @@ angular.module('portfolio', ['ngRoute']).
             scope.$watch(attrs.proportionalHeight, function(ratio) {
                 update(ratio);
             });
+
+            $(window).resize(update);
         }
     });

@@ -3,22 +3,23 @@ layout: default
 title: Paulina Sanpruch - Portfolio
 tab: portfolio
 ---
-<div  ng-controller="Posts">
-
+<div ng-controller="Posts">
     <section ng-repeat="category in posts">
         <h3 id="{[ category.name ]}">{[ category.name ]}</h3>
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
-
-                <div class="post-item-content" proportional-height="post.image_width/post.image_height">
+                <a href="javascript:" ng-click="show(post)" class="post-item-content" proportional-height="post.image_width/post.image_height">
                     <div class="post-item-overlay">
                          <h4>{[ post.title ]}</h4>
                     </div>
                     <img ng-src="/images/{[ post.image ]}" class="img-responsive" >
-                </div>
-
+                </a>
             </li>
         </ul>
     </section>
+
+    <div ng-if="shown" class="slideshow" style="margin-left: -{[ shown.image_width/ 2]}px; margin-top: -{[ shown.image_height/2 ]}px">
+        <img ng-click="show(null)" ng-src="/images/{[ shown.image ]}" class="img-responsive">
+    </div>
 </div>
