@@ -119,16 +119,35 @@ h4 {
 
 }
 
-.affix {
+nav {
+
+}
+
+.menu {
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav.affix {
     top: 40px;
 }
 
+nav.affix .menu {
+
+}
 
 .nav-logo {
-   margin-right: -50px;
+    display: block;
+    height: 98px;
+}
+
+#nav-firstname {
+    background: url(/images/site/firstname.png) top right no-repeat;
 }
 
 #nav-lastname {
+    background: url(/images/site/lastname.png) top left no-repeat;
     opacity: 0;
     margin-top: -50px;
 
@@ -137,4 +156,9 @@ h4 {
     /*-o-transition: opacity 0.4s ease-in-out;*/
     /*transition: opacity 0.4s ease-in-out;*/
 }
+
+.sidebar {
+    padding: 0;
+}
+
 
