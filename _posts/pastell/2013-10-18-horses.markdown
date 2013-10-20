@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Horses"
+date:   2013-10-18 20:20:00
+categories: ['pastell']
+image: pastell/horses.jpg
+image_width: 667
+image_height: 500
+---
+
