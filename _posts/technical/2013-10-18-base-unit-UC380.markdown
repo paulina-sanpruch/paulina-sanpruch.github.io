@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Base unit UC-380"
+date:   2013-10-19 04:20:00
+categories: ['technical drawings']
+image: technical/baseUnitUC380.jpg
+image_width: 500
+image_height: 700
+---
+
