@@ -23,7 +23,7 @@ header {
 }
 
 #content {
-  padding-top: 90px;
+  padding-top: 120px;
 }
 
 #tab-content {
@@ -124,13 +124,13 @@ h4 {
 
 
 .menu {
-    padding-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
     line-height: 3.2;
     text-align: right;
+    margin-top: -40px;
   @media (min-width: @screen-sm) {
-    padding-top: 40px;
+   // padding-top: 40px;
   }
 }
 
@@ -145,10 +145,15 @@ h4 {
 
 .menu a:hover {
     text-decoration: underline;
+
 }
+
+
 
 nav.affix {
     //top: 40px;
+  width: percentage((2 / @grid-columns));
+  max-width: (2 / @grid-columns) * @container-lg-desktop;
 }
 
 
@@ -157,7 +162,7 @@ nav.affix {
     display: block;
     position: relative;
     height: 98px;
-    margin-right: -100px; // not not stretch the sidebar
+
 }
 
 
@@ -166,18 +171,18 @@ nav.affix {
 
 
 #nav-firstname {
-    background: url(/images/site/firstname.png);
-    width: 149px;
-    left: 20px;
+    background: url(/images/site/firstname.png) top right no-repeat;
 }
 
 #nav-lastname {
     background: url(/images/site/lastname.png);
 //    opacity: 0;
-    left: 155px;
+    left: 100%;
     top: -98px;
     width: 189px;
     .transition(all 0.4s ease-in-out);
+    margin-left: 10px;
+    margin-right: -100px; // not not stretch the sidebar
 
     @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
        left: @affixLastNameLeft;
@@ -206,7 +211,7 @@ nav.affix {
 #corner {
   display: none;
 
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-sm) and (min-height: 690px) {
     display: block;
     position: fixed;
     bottom: -23px;
