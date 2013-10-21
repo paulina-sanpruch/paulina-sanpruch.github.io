@@ -6829,6 +6829,26 @@ header {
   border-radius: 5px;
 }
 
+#tab-content:before,
+#tab-content:after {
+  display: table;
+  content: " ";
+}
+
+#tab-content:after {
+  clear: both;
+}
+
+#tab-content:before,
+#tab-content:after {
+  display: table;
+  content: " ";
+}
+
+#tab-content:after {
+  clear: both;
+}
+
 #tab-content.first-tab-active {
   border-top-left-radius: 0;
 }
@@ -7077,4 +7097,10 @@ nav.affix {
        -moz-column-gap: 10px;
             column-gap: 10px;
   }
+}
+
+#my-photo {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
 }

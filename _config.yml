@@ -3,6 +3,7 @@ safe: true
 lsi: false
 pygments: true
 markdown: redcarpet
+encoding: UTF-8
 exclude: ['bootstrap/node_modules', 'node_modules']
 
 
