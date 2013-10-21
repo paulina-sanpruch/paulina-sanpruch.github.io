@@ -12,15 +12,6 @@ header {
     position: relative;
 }
 
-#pen {
-  display: none;
-  @media (min-width: @screen-sm) {
-    display: block;
-    position: absolute;
-    top: -130px;
-    left: 328px;
-  }
-}
 
 #content {
   padding-top: 120px;
@@ -161,40 +152,72 @@ nav.affix {
   max-width: (2 / @grid-columns) * @container-lg-desktop;
 }
 
+@signatureHeight: 98px;
+@firstNameWidth: 149px;
+@lastNameWidth: 189px;
+@signatureWordSpacing: 10px;
+@penHeight: 177px;
+@signatureLeft: 20px;
 
 
-.nav-logo {
-    display: block;
-    position: relative;
-    height: 98px;
-
+.first-name-in-sidebar-position() {
+  left: 0;
+  width: 100%;
 }
 
 .last-name-in-sidebar-position() {
   left: 0;
   top: -50px;
   background-position: right -30px top;
+  width: 100%;
+}
+
+
+#pen {
+  display: none;
+  @media (min-width: @screen-sm) {
+    display: block;
+    position: relative;
+    top: -@penHeight - (@signatureHeight * 2) + 47px;
+    left: @firstNameWidth + @signatureWordSpacing + @lastNameWidth - 7px;
+    margin-bottom: -@penHeight;
+    .transition(all 0.4s ease-in-out);
+  }
+}
+
+.nav-logo {
+    display: block;
+    position: relative;
+    height: @signatureHeight;
 }
 
 #nav-firstname {
     background: url(/images/site/firstname.png) top right no-repeat;
+    left: @signatureLeft;
+    width: @firstNameWidth;
 }
 
 #nav-lastname {
     background: url(/images/site/lastname.png) top left no-repeat;
-    left: 100%;
-    top: -98px;
+    left: @firstNameWidth + @signatureWordSpacing + @signatureLeft;
+    top: -@signatureHeight;
+    width: @lastNameWidth;
     .transition(all 0.4s ease-in-out);
-
-    @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
-      .last-name-in-sidebar-position();
-    }
 }
-
 
 .affix #nav-lastname {
   .last-name-in-sidebar-position();
 }
+
+.affix #nav-firstname {
+  .first-name-in-sidebar-position();
+}
+
+.affix #pen {
+  top: -500px;
+  left: 500px;
+}
+
 
 .menu > li.menu-page-link-first {
    padding-top: @line-height-computed * 1.5;

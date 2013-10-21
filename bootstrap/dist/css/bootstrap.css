@@ -6818,19 +6818,6 @@ header {
   position: relative;
 }
 
-#pen {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  #pen {
-    position: absolute;
-    top: -130px;
-    left: 328px;
-    display: block;
-  }
-}
-
 #content {
   padding-top: 120px;
   padding-left: 0;
@@ -6965,6 +6952,22 @@ nav.affix {
   max-width: 195px;
 }
 
+#pen {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #pen {
+    position: relative;
+    top: -326px;
+    left: 341px;
+    display: block;
+    margin-bottom: -177px;
+    -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+  }
+}
+
 .nav-logo {
   position: relative;
   display: block;
@@ -6972,29 +6975,35 @@ nav.affix {
 }
 
 #nav-firstname {
+  left: 20px;
+  width: 149px;
   background: url(/images/site/firstname.png) top right no-repeat;
 }
 
 #nav-lastname {
   top: -98px;
-  left: 100%;
+  left: 179px;
+  width: 189px;
   background: url(/images/site/lastname.png) top left no-repeat;
   -webkit-transition: all 0.4s ease-in-out;
           transition: all 0.4s ease-in-out;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  #nav-lastname {
-    top: -50px;
-    left: 0;
-    background-position: right -30px top;
-  }
-}
-
 .affix #nav-lastname {
   top: -50px;
   left: 0;
+  width: 100%;
   background-position: right -30px top;
+}
+
+.affix #nav-firstname {
+  left: 0;
+  width: 100%;
+}
+
+.affix #pen {
+  top: -500px;
+  left: 500px;
 }
 
 .menu > li.menu-page-link-first {
