@@ -19,11 +19,14 @@ header {
 }
 
 #tab-content {
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-radius: @border-radius-base;
     background: white;
-    padding: 15px
+    padding: 15px;
+}
+
+#tab-content.first-tab-active {
+     border-top-left-radius: 0;
 }
 
 h3 {
@@ -157,7 +160,7 @@ nav.affix {
 @lastNameWidth: 189px;
 @signatureWordSpacing: 10px;
 @penHeight: 177px;
-@signatureLeft: 20px;
+@signatureLeft: 60px;
 
 
 .first-name-in-sidebar-position() {
@@ -179,7 +182,7 @@ nav.affix {
     display: block;
     position: relative;
     top: -@penHeight - (@signatureHeight * 2) + 47px;
-    left: @firstNameWidth + @signatureWordSpacing + @lastNameWidth - 7px;
+    left: @signatureLeft + @firstNameWidth + @signatureWordSpacing + @lastNameWidth - 27px;
     margin-bottom: -@penHeight;
     .transition(all 0.4s ease-in-out);
   }

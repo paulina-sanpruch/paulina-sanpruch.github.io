@@ -64,7 +64,7 @@
                   <li class="{% if page.tab == 'portfolio' %}active{% endif %}"><a href="/">portfolio</a></li>
                   <li class="{% if page.tab == 'contact' %}active{% endif %}"><a href="/contact.html">contact</a></li>
                 </ul>
-                <div id="tab-content">
+                <div id="tab-content" class="{% if page.tab == 'about' %}first-tab-active{% endif %}">
                     {{ content }}
                 </div>
               </div>
