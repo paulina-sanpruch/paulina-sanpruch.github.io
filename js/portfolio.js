@@ -1,3 +1,28 @@
+var _ = {};
+_.debounce = function(func, wait, immediate) {
+    var timeout, args, context, timestamp, result;
+    return function() {
+      context = this;
+      args = arguments;
+      timestamp = new Date();
+      var later = function() {
+        var last = (new Date()) - timestamp;
+        if (last < wait) {
+          timeout = setTimeout(later, wait - last);
+        } else {
+          timeout = null;
+          if (!immediate) result = func.apply(context, args);
+        }
+      };
+      var callNow = immediate && !timeout;
+      if (!timeout) {
+        timeout = setTimeout(later, wait);
+      }
+      if (callNow) result = func.apply(context, args);
+      return result;
+    };
+  }
+
 angular.module('portfolio', ['ngRoute']).
     config(function($routeProvider, $interpolateProvider){
         $interpolateProvider.startSymbol('{[').endSymbol(']}');
@@ -33,15 +58,18 @@ angular.module('portfolio', ['ngRoute']).
     }).
     directive('proportionalHeight', function() {
         return function(scope, element, attrs) {
-            function update(ratio) {
+            var ratio;
+
+            function update() {
                 var width = element.width(), height = width / ratio;
                 element.css('height', height + 'px');
             }
 
-            scope.$watch(attrs.proportionalHeight, function(ratio) {
-                update(ratio);
+            scope.$watch(attrs.proportionalHeight, function(newRatio) {
+                ratio = newRatio;
+                update();
             });
 
-            $(window).resize(update);
+            $(window).resize(_.debounce(update, 200));
         }
     });
