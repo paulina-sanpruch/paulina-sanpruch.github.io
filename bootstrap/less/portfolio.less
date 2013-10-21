@@ -24,6 +24,7 @@ header {
 
 #content {
   padding-top: 120px;
+  padding-left: 0;
 }
 
 #tab-content {
@@ -122,20 +123,24 @@ h4 {
     font-weight: bold;
 }
 
+.menu > li {
+   padding-top: @line-height-computed / 1.5;
+}
+
 
 .menu {
-    padding-left: 15px;
-    padding-right: 15px;
-    line-height: 3.2;
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
     text-align: right;
     margin-top: -40px;
   @media (min-width: @screen-sm) {
-   // padding-top: 40px;
+    padding-right: @grid-gutter-width;
   }
 }
 
 .menu ul {
    line-height: 1.6;
+   margin-top: @line-height-computed / 1.5;
 }
 
 
@@ -165,42 +170,47 @@ nav.affix {
 
 }
 
-
-@affixLastNameTop: -50px;
-@affixLastNameLeft: -@grid-gutter-width + 40px;
-
+.last-name-in-sidebar-position() {
+  left: 0;
+  top: -50px;
+  background-position: right -30px top;
+}
 
 #nav-firstname {
     background: url(/images/site/firstname.png) top right no-repeat;
 }
 
 #nav-lastname {
-    background: url(/images/site/lastname.png);
-//    opacity: 0;
+    background: url(/images/site/lastname.png) top left no-repeat;
     left: 100%;
     top: -98px;
-    width: 189px;
     .transition(all 0.4s ease-in-out);
-    margin-left: 10px;
-    margin-right: -100px; // not not stretch the sidebar
 
     @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
-       left: @affixLastNameLeft;
-        top: @affixLastNameTop;
+      .last-name-in-sidebar-position();
     }
 }
 
 
-
-
 .affix #nav-lastname {
-//    opacity: 1;
-  left: @affixLastNameLeft;
-  top: @affixLastNameTop;
+  .last-name-in-sidebar-position();
+}
 
-  @media (min-width: @screen-md) {
-    left: @affixLastNameLeft + @grid-gutter-width;
-  }
+.menu > li.menu-page-link-first {
+   padding-top: @line-height-computed * 1.5;
+}
+
+.menu-page-link {
+  opacity: 0;
+  .transition(all 0.4s ease-in-out);
+}
+
+.menu-page-link a, .menu-page-link a:visited {
+  color: #666;
+}
+
+.affix .menu-page-link {
+  opacity: 1;
 }
 
 .sidebar {

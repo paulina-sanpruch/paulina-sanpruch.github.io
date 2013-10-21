@@ -6833,6 +6833,7 @@ header {
 
 #content {
   padding-top: 120px;
+  padding-left: 0;
 }
 
 #tab-content {
@@ -6927,19 +6928,25 @@ h4 {
   font-weight: bold;
 }
 
+.menu > li {
+  padding-top: 13.333333333333334px;
+}
+
 .menu {
   padding-right: 15px;
   padding-left: 15px;
   margin-top: -40px;
-  line-height: 3.2;
   text-align: right;
 }
 
 @media (min-width: 768px) {
-  
+  .menu {
+    padding-right: 30px;
+  }
 }
 
 .menu ul {
+  margin-top: 13.333333333333334px;
   line-height: 1.6;
 }
 
@@ -6971,10 +6978,7 @@ nav.affix {
 #nav-lastname {
   top: -98px;
   left: 100%;
-  width: 189px;
-  margin-right: -100px;
-  margin-left: 10px;
-  background: url(/images/site/lastname.png);
+  background: url(/images/site/lastname.png) top left no-repeat;
   -webkit-transition: all 0.4s ease-in-out;
           transition: all 0.4s ease-in-out;
 }
@@ -6982,19 +6986,34 @@ nav.affix {
 @media (min-width: 768px) and (max-width: 991px) {
   #nav-lastname {
     top: -50px;
-    left: 10px;
+    left: 0;
+    background-position: right -30px top;
   }
 }
 
 .affix #nav-lastname {
   top: -50px;
-  left: 10px;
+  left: 0;
+  background-position: right -30px top;
 }
 
-@media (min-width: 992px) {
-  .affix #nav-lastname {
-    left: 40px;
-  }
+.menu > li.menu-page-link-first {
+  padding-top: 30px;
+}
+
+.menu-page-link {
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+
+.menu-page-link a,
+.menu-page-link a:visited {
+  color: #666;
+}
+
+.affix .menu-page-link {
+  opacity: 1;
 }
 
 .sidebar {
