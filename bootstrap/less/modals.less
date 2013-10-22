@@ -32,21 +32,22 @@
   left: 0;
   z-index: @zindex-modal-background;
 
-  // When fading in the modal, animate it to slide down
-  &.fade .modal-dialog {
-    .translate(0, -25%);
-    .transition-transform(~"0.3s ease-out");
-  }
-  &.in .modal-dialog { .translate(0, 0)}
+//  // When fading in the modal, animate it to slide down
+//  &.fade .modal-dialog {
+//    .translate(0, -25%);
+//    .transition-transform(~"0.3s ease-out");
+//  }
+//  &.in .modal-dialog { .translate(0, 0)}
 }
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   margin-left: auto;
   margin-right: auto;
-  width: auto;
+  max-width: 100%;
   padding: 10px;
   z-index: (@zindex-modal-background + 10);
+  .transition(all 0.4s ease-in-out);
 }
 
 // Actual modal
@@ -73,7 +74,7 @@
   background-color: @modal-backdrop-bg;
   // Fade for backdrop
   &.fade { .opacity(0); }
-  &.in { .opacity(.5); }
+  &.in { .opacity(.8); }
 }
 
 // Modal header
@@ -130,7 +131,6 @@
   .modal-dialog {
     left: 50%;
     right: auto;
-    width: 600px;
     padding-top: 30px;
     padding-bottom: 30px;
   }

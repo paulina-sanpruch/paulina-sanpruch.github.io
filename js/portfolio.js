@@ -24,11 +24,13 @@ _.debounce = function(func, wait, immediate) {
   }
 
 angular.module('portfolio', ['ngRoute']).
-    config(function($routeProvider, $interpolateProvider){
+    config(function($routeProvider, $interpolateProvider, $sceProvider){
         $interpolateProvider.startSymbol('{[').endSymbol(']}');
+        $sceProvider.enabled(false);
     }).
     controller('Posts', function($scope, $http, $routeParams) {
         //$scope.posts = posts.data;
+        var postIdx, categoryIdx;
 
         $http({method: 'GET', url: '/posts.json'}).
             success(function(data, status, headers, config) {
@@ -39,8 +41,40 @@ angular.module('portfolio', ['ngRoute']).
                 alert('We are sorry. Could not load portfolio. Please try again by refreshing the page.')
             });
 
-        $scope.show = function(post) {
-            $scope.shown = post;
+        $scope.show = function(newPostIdx, newCategoryIdx) {
+            postIdx = newPostIdx;
+            categoryIdx = newCategoryIdx;
+
+            $scope.shown = $scope.posts[categoryIdx].posts[postIdx];
+            //console.log('show', newPostIdx, newCategoryIdx, $scope.shown);
+            $scope.hasNext = postIdx + 1 < $scope.posts[categoryIdx].posts.length || categoryIdx + 1 < $scope.posts.length;
+            $scope.hasPrev = postIdx > 0 || categoryIdx > 0;
+            $(".modal").modal();
+        };
+
+        $scope.next = function() {
+            if ($scope.hasNext) {
+                if (postIdx + 1 < $scope.posts[categoryIdx].posts.length) {
+                    $scope.show(postIdx + 1, categoryIdx);
+                } else {
+                    $scope.show(0, categoryIdx + 1);
+                }
+            }
+        };
+
+        $scope.prev = function() {
+            if ($scope.hasPrev) {
+                if (postIdx > 0) {
+                    $scope.show(postIdx - 1, categoryIdx);
+                } else {
+                    $scope.show(0, categoryIdx - 1);
+                }
+            }
+        };
+
+        $scope.hide = function() {
+            $(".modal").modal('hide');
+            $scope.shown = null;
         }
     }).
     directive('proportionalHeight', function() {

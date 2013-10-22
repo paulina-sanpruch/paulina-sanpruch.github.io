@@ -9,9 +9,9 @@ tab: portfolio
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
-                <a href="javascript:" ng-click="show(post)" class="post-item-content" proportional-height="post.image_width/post.image_height">
+                <a href="javascript:" ng-click="show($index, $parent.$index)" class="post-item-content" proportional-height="post.image_width/post.image_height">
                     <div class="post-item-overlay">
-                         <h4>{[ post.title ]}</h4>
+                         <h4 class="post-item-title">{[ post.title ]}</h4>
                     </div>
                     <img ng-src="/images/{[ post.image ]}" class="img-responsive" >
                 </a>
@@ -19,7 +19,21 @@ tab: portfolio
         </ul>
     </section>
 
-    <div ng-if="shown" class="slideshow" style="margin-left: -{[ shown.image_width/ 2]}px; margin-top: -{[ shown.image_height/2 ]}px">
-        <img ng-click="show(null)" ng-src="/images/{[ shown.image ]}" class="img-responsive">
+    <div class="modal fade">
+        <div class="modal-dialog" style="width: {[shown.image_width + 6]}px;">
+            <div class="slideshow">
+                <figure>
+                    <a ng-show="hasPrev" href="javascript:" class="slideshow-prev" ng-click="prev()">&lang;</a>
+                    <a ng-show="hasNext" href="javascript:" class="slideshow-next" ng-click="next()">&rang;</a>
+                    <img class="slideshow-img img-responsive" ng-click="next()" ng-src="{[ shown ? '/images/' + shown.image : null ]}">
+                    <figcaption>
+                        <button type="button" class="close pull-right" ng-click="hide()" aria-hidden="true">&times;</button>
+                        <h4>{[ shown.title ]}</h4>
+                        <div ng-bind-html="shown.content"></div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
     </div>
+
 </div>

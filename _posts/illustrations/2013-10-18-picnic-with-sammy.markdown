@@ -7,3 +7,5 @@ image: illustrations/picnicWithSammy.jpg
 image_width: 533
 image_height: 400
 ---
+
+The front page of a game for children.

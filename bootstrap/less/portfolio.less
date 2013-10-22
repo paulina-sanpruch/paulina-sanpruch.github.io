@@ -80,7 +80,7 @@ h3 {
     /*transition: opacity 0.4s ease-in-out;*/
 }
 
-h4 {
+.post-item-title {
     color: white;
     vertical-align: middle;
     text-align: center;
@@ -289,6 +289,7 @@ h4 {
       background: url(/images/site/firstname.png) top right no-repeat;
       left: @signatureLeft;
       width: @firstNameWidth;
+      .transition(all 0.4s ease-in-out);
   }
 
   #nav-lastname {
@@ -338,15 +339,7 @@ h4 {
     padding: 0;
 }
 
-.slideshow {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border: 6px solid #c2c2c2;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
+
 
 .posts {
 
@@ -356,6 +349,51 @@ h4 {
   @media (min-width: @screen-md){
     .content-columns(3, 10px);
   }
+}
+
+//-------------------------------------
+// Slideshow
+//-------------------------------------
+
+
+.slideshow {
+  position: relative;
+}
+
+.slideshow-img {
+    border: 6px solid #c2c2c2;
+    border-radius: @border-radius-base;
+}
+
+figcaption {
+  color: #eee;
+}
+
+.slideshow:hover .slideshow-prev, .slideshow:hover .slideshow-next {
+  opacity: 0.6;
+}
+
+.slideshow-prev, .slideshow-next, .slideshow-prev:hover, .slideshow-next:hover, .slideshow-prev:visited, .slideshow-next:visited {
+  color: white;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  font-size: (@font-size-base * 6);
+  margin-top: -(@font-size-base * 3) - 50px;
+  .user-select(none);
+}
+
+.slideshow-prev:hover, .slideshow-next:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.slideshow-prev {
+    left: 20px;
+}
+
+.slideshow-next {
+    right: 20px;
 }
 
 // ------------------------------------
