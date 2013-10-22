@@ -77,6 +77,10 @@ module.exports = function(grunt) {
         src: ['less/bootstrap.less'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      ie9: {
+        src: ['less/bootstrap-ie9.less'],
+        dest: 'dist/css/<%= pkg.name %>-ie9.css'
+      },
       min: {
         options: {
           compress: true

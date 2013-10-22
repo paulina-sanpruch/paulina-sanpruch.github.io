@@ -26,19 +26,6 @@ _.debounce = function(func, wait, immediate) {
 angular.module('portfolio', ['ngRoute']).
     config(function($routeProvider, $interpolateProvider){
         $interpolateProvider.startSymbol('{[').endSymbol(']}');
-       /* $routeProvider.
-            when('/:category', {
-                templateUrl: 'posts',
-                controller: 'Posts',
-                resolve: {
-                    posts: function($http) {
-
-                    }
-                }
-            }).
-            otherwise({
-                redirectTo: '/illustrations'
-            }); */
     }).
     controller('Posts', function($scope, $http, $routeParams) {
         //$scope.posts = posts.data;
@@ -73,3 +60,13 @@ angular.module('portfolio', ['ngRoute']).
             $(window).resize(_.debounce(update, 200));
         }
     });
+
+$(document)
+    .on('click', function() {
+        $('.expanded').removeClass('expanded');
+    })
+    .on('click', '#btn-menu', function(e) {
+        $('.menu').toggleClass('expanded');
+        e.stopPropagation();
+    });
+

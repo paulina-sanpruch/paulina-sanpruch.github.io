@@ -3,10 +3,6 @@ html {
     background: url(/images/site/bg.jpg) repeat;
 }
 
-body {
-    background: url(/images/site/podarcie.png)  top center no-repeat;
-    padding-top: 50px;
-}
 
 header {
     position: relative;
@@ -14,8 +10,10 @@ header {
 
 
 #content {
-  padding-top: 120px;
-  padding-left: 0;
+  @media (min-width: @screen-sm) {
+    padding-top: 120px;
+    padding-left: 0;
+  }
 }
 
 #tab-content {
@@ -103,15 +101,6 @@ h4 {
     list-style-type: none;
     list-style-position: inside;
     padding: 0;
-  @media (max-width: @screen-sm) {
-    display: block;
-  }
-}
-
-.menu li {
-  @media (max-width: @screen-sm) {
-    display: inline;
-  }
 }
 
 .menu > li > a {
@@ -126,6 +115,7 @@ h4 {
 .menu {
     padding-left: @grid-gutter-width / 2;
     padding-right: @grid-gutter-width / 2;
+     padding-bottom: @line-height-computed / 1.5;
     text-align: right;
     margin-top: -40px;
   @media (min-width: @screen-sm) {
@@ -150,11 +140,6 @@ h4 {
 
 
 
-nav.affix {
-    //top: 40px;
-  width: percentage((2 / @grid-columns));
-  max-width: (2 / @grid-columns) * @container-lg-desktop;
-}
 
 @signatureHeight: 98px;
 @firstNameWidth: 149px;
@@ -162,6 +147,10 @@ nav.affix {
 @signatureWordSpacing: 10px;
 @penHeight: 177px;
 @signatureLeft: 60px;
+
+#pen {
+  display: none;
+}
 
 
 .first-name-in-sidebar-position() {
@@ -176,50 +165,10 @@ nav.affix {
   width: 100%;
 }
 
-
-#pen {
-  display: none;
-  @media (min-width: @screen-sm) {
-    display: block;
-    position: relative;
-    top: -@penHeight - (@signatureHeight * 2) + 47px;
-    left: @signatureLeft + @firstNameWidth + @signatureWordSpacing + @lastNameWidth - 27px;
-    margin-bottom: -@penHeight;
-    .transition(all 0.4s ease-in-out);
-  }
-}
-
 .nav-logo {
     display: block;
     position: relative;
     height: @signatureHeight;
-}
-
-#nav-firstname {
-    background: url(/images/site/firstname.png) top right no-repeat;
-    left: @signatureLeft;
-    width: @firstNameWidth;
-}
-
-#nav-lastname {
-    background: url(/images/site/lastname.png) top left no-repeat;
-    left: @firstNameWidth + @signatureWordSpacing + @signatureLeft;
-    top: -@signatureHeight;
-    width: @lastNameWidth;
-    .transition(all 0.4s ease-in-out);
-}
-
-.affix #nav-lastname {
-  .last-name-in-sidebar-position();
-}
-
-.affix #nav-firstname {
-  .first-name-in-sidebar-position();
-}
-
-.affix #pen {
-  top: -500px;
-  left: 500px;
 }
 
 
@@ -227,36 +176,166 @@ nav.affix {
    padding-top: @line-height-computed * 1.5;
 }
 
-.menu-page-link {
-  opacity: 0;
-  .transition(all 0.4s ease-in-out);
-}
 
 .menu-page-link a, .menu-page-link a:visited {
   color: #666;
 }
 
-.affix .menu-page-link {
-  opacity: 1;
+#corner {
+  display: none;
+}
+
+#btn-menu {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  border-color: lighten(#100AF3, 40%);
+}
+
+@media (max-width: @screen-xs-max) {
+  body {
+    padding-top: 100px;
+  }
+
+
+
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    z-index: 1;
+  }
+
+  #nav-header {
+    position: absolute;
+    background: url(/images/site/podarcie.png) no-repeat;
+    background-position: right -146px top -82px;
+    z-index: 2;
+    height: 90px;
+    width: 100%;
+  }
+
+  #nav-firstname {
+    background: url(/images/site/signature.png) left top no-repeat;
+    background-size: contain;
+    margin: 0 20px;
+  }
+
+  #nav-lastname {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 70px;
+    background: url(/images/site/bg.jpg) repeat;
+    text-align: center;
+    .box-shadow(1px 3px 3px #bbb);
+    z-index: 1;
+
+    > li {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .content-columns(3, 10px);
+
+    &.expanded {
+      display: block;
+    }
+  }
+
+  .nav-logo {
+      height: 60px;
+  }
+
+
+}
+
+@media (min-width: @screen-sm) {
+  #btn-menu {
+    display: none;
+
+  }
+
+
+  body {
+      background: url(/images/site/podarcie.png)  top center no-repeat;
+      padding-top: 50px;
+  }
+
+
+  nav.affix {
+      width: percentage((2 / @grid-columns));
+      max-width: (2 / @grid-columns) * @container-lg-desktop;
+  }
+
+  #pen {
+    display: block;
+    position: relative;
+    top: -@penHeight - (@signatureHeight * 2) + 47px;
+    left: @signatureLeft + @firstNameWidth + @signatureWordSpacing + @lastNameWidth - 27px;
+    margin-bottom: -@penHeight;
+    .transition(all 0.4s ease-in-out);
+  }
+
+  #nav-firstname {
+      background: url(/images/site/firstname.png) top right no-repeat;
+      left: @signatureLeft;
+      width: @firstNameWidth;
+  }
+
+  #nav-lastname {
+      background: url(/images/site/lastname.png) top left no-repeat;
+      left: @firstNameWidth + @signatureWordSpacing + @signatureLeft;
+      top: -@signatureHeight;
+      width: @lastNameWidth;
+      .transition(all 0.4s ease-in-out);
+  }
+
+  .affix #nav-lastname {
+     .last-name-in-sidebar-position();
+  }
+
+  .affix #nav-firstname {
+      .first-name-in-sidebar-position();
+  }
+
+  .menu-page-link {
+    opacity: 0;
+    .transition(all 0.4s ease-in-out);
+  }
+
+
+  .affix .menu-page-link {
+    opacity: 1;
+  }
+
+  .affix #pen {
+    top: -500px;
+    left: 500px;
+  }
+
+  #corner {
+
+      display: block;
+      position: fixed;
+      bottom: -23px;
+      left: -20px;
+      width: 248px;
+      height: 280px;
+      background: url(/images/site/corner.png);
+  }
 }
 
 .sidebar {
     padding: 0;
-}
-
-
-#corner {
-  display: none;
-
-  @media (min-width: @screen-sm) and (min-height: 690px) {
-    display: block;
-    position: fixed;
-    bottom: -23px;
-    left: -20px;
-    width: 248px;
-    height: 280px;
-    background: url(/images/site/corner.png);
-  }
 }
 
 .slideshow {
