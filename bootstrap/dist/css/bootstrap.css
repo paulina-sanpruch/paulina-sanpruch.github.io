@@ -2919,12 +2919,18 @@ body.modal-open,
   margin-left: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .modal-dialog {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal-dialog {
-    right: auto;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -2950,7 +2956,13 @@ body.modal-open,
   float: left !important;
 }
 
-.hide {
+.hide,
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
   display: none !important;
 }
 
@@ -3553,13 +3565,6 @@ header {
   position: relative;
 }
 
-@media (min-width: 768px) {
-  #content {
-    padding-top: 120px;
-    padding-left: 0;
-  }
-}
-
 #tab-content {
   padding: 15px;
   background: white;
@@ -3606,12 +3611,7 @@ h3 {
   padding: 0 !important;
   margin: 10px 0;
   border: 6px solid #c2c2c2;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .post-item-content,
@@ -3792,6 +3792,10 @@ h3 {
     padding-top: 50px;
     background: url(/images/site/podarcie.png) top center no-repeat;
   }
+  #content {
+    padding-top: 120px;
+    padding-left: 0;
+  }
   nav.affix {
     width: 16.666666666666664%;
     max-width: 195px;
@@ -3842,6 +3846,9 @@ h3 {
     top: -500px;
     left: 500px;
   }
+}
+
+@media (min-width: 768px) and (min-height: 920px) {
   #corner {
     position: fixed;
     bottom: -23px;
@@ -3902,7 +3909,9 @@ figcaption {
 .slideshow-prev:hover,
 .slideshow-next:hover,
 .slideshow-prev:visited,
-.slideshow-next:visited {
+.slideshow-next:visited,
+.slideshow-prev:active,
+.slideshow-next:active {
   position: absolute;
   top: 50%;
   margin-top: -92px;

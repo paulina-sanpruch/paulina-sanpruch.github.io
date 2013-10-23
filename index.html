@@ -4,8 +4,8 @@ title: Paulina Sanpruch - Portfolio
 tab: portfolio
 ---
 <div ng-controller="Posts">
-    <section ng-repeat="category in posts">
-        <h3 id="{[ category.name ]}">{[ category.name ]}</h3>
+    <section ng-repeat="category in posts" ng-cloak>
+        <h3 id="{[ category.name | hyphenate ]}">{[ category.name ]}</h3>
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">
@@ -19,8 +19,8 @@ tab: portfolio
         </ul>
     </section>
 
-    <div class="modal fade">
-        <div class="modal-dialog" ng-style="{width: (shown.image_width + 32)+'px'}">
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" ng-style="{width: (shown.image_width + 32)+'px', 'margin-left': -(shown.image_width / 2)+'px', 'margin-top': -(25 + shown.image_height / 2)+'px'}">
             <div class="slideshow">
                 <figure>
                     <a ng-show="hasPrev" href="javascript:" class="slideshow-prev" ng-click="prev()">&lang;</a>

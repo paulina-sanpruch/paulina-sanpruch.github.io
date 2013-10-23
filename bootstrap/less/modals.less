@@ -125,14 +125,23 @@
   }
 }
 
+@media screen and (max-width: @screen-xs-max) {
+  .modal-dialog {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
 // Scale up the modal
 @media screen and (min-width: @screen-tablet) {
 
   .modal-dialog {
+    position: absolute;
     left: 50%;
-    right: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    top: 50%;
+
+ //   padding-top: 30px;
+ //   padding-bottom: 30px;
   }
   .modal-content {
     .box-shadow(0 5px 15px rgba(0,0,0,.5));

@@ -9,12 +9,7 @@ header {
 }
 
 
-#content {
-  @media (min-width: @screen-sm) {
-    padding-top: 120px;
-    padding-left: 0;
-  }
-}
+
 
 #tab-content {
   .clearfix;
@@ -40,20 +35,12 @@ h3 {
 
 
 .post-item {
-  /*  width: 32%;*/
     width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     border: 6px solid #c2c2c2;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-  /*  margin: 0.5%;*/
 
     padding: 0 !important;
     margin: 10px 0;
-
 }
 
 .post-item-content, .post-item-content:visited {
@@ -271,6 +258,11 @@ h3 {
   }
 
 
+  #content {
+      padding-top: 120px;
+      padding-left: 0;
+  }
+
   nav.affix {
       width: percentage((2 / @grid-columns));
       max-width: (2 / @grid-columns) * @container-lg-desktop;
@@ -322,9 +314,11 @@ h3 {
     top: -500px;
     left: 500px;
   }
+}
 
+
+@media (min-width: @screen-sm) and (min-height: 920px) {
   #corner {
-
       display: block;
       position: fixed;
       bottom: -23px;

@@ -102,7 +102,10 @@ angular.module('portfolio', ['ngRoute']).
             });
 
         }
-    })
+    }).
+    filter('hyphenate', function() {
+      return function(s) { return s.replace(' ', '-')};
+    });
 ;
 
 $(document)
