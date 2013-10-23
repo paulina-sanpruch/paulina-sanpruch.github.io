@@ -16,7 +16,7 @@
           <script src="/bootstrap/assets/js/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body data-spy="scroll" data-target="nav">
         <div class="container">
             <div class="row">
               <div class="col-sm-2 sidebar">
@@ -32,27 +32,27 @@
                          <li>
                              <a href="/#illustrations">graphics</a>
                              <ul>
-                                <li><a href="/#illustrations">illustrations</a></li>
-                                <li><a href="/#characters">characters</a></li>
-                                <li><a href="/#comics">comics</a></li>
+                                <li><a href="/#illustrations" data-target="#illustrations">illustrations</a></li>
+                                <li><a href="/#characters" data-target="#characters">characters</a></li>
+                                <li><a href="/#comics" data-target="#comics">comics</a></li>
                              </ul>
 
                          </li>
                          <li>
                              <a href="/#art">art</a>
                              <ul>
-                                <li><a href="/#oil">oil</a></li>
-                                <li><a href="/#watercolor">watercolor</a></li>
-                                <li><a href="/#pastel">pastel</a></li>
-                                <li><a href="/#ink">ink</a></li>
-                                <li><a href="/#pencil">pencil</a></li>
+                                <li><a href="/#oil" data-target="#oil">oil</a></li>
+                                <li><a href="/#watercolor" data-target="#watercolor">watercolor</a></li>
+                                <li><a href="/#pastel" data-target="#pastel">pastel</a></li>
+                                <li><a href="/#ink" data-target="#ink">ink</a></li>
+                                <li><a href="/#pencil" data-target="#pencil">pencil</a></li>
                              </ul>
                          </li>
                          <li>
-                             <a href="/#architecture">architecture</a>
+                             <a href="/#architecture" data-target="#architecture">architecture</a>
                          </li>
                          <li>
-                             <a href="/#technical-drawings">technical drawings</a>
+                             <a href="/#technical-drawings" data-target="#technical-drawings">technical <span class="visible-lg">drawings</span></a>
                          </li>
                          <li class="menu-page-link menu-page-link-first">
                              <a href="/about-me.html">about me</a>
@@ -82,6 +82,7 @@
 
         <script src="//code.jquery.com/jquery.js"></script>
         <script src="/bootstrap/js/affix.js"></script>
+        <script src="/bootstrap/js/scrollspy.js"></script>
         <script src="/bootstrap/js/modal.js"></script>
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
