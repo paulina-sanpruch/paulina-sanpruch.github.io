@@ -29539,7 +29539,7 @@ angular.module('portfolio', []).
             element.lazyload({
                  effect : "fadeIn",
                  failure_limit : 10,
-                 threshold : 200
+                 threshold : 100
             });
 
         }
