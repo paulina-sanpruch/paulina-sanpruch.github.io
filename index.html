@@ -3,7 +3,12 @@ layout: default
 title: Paulina Sanpruch - Portfolio
 tab: portfolio
 ---
+
 <div ng-controller="Posts">
+    <div ng-if="!posts" class="loader">
+        Loading portfolio items, please wait a moment...
+    </div>
+
     <section ng-repeat="category in posts" ng-cloak>
         <h3 id="{[ category.name | hyphenate ]}">{[ category.name ]}</h3>
 

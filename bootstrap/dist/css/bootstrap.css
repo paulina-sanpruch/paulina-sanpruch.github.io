@@ -3886,6 +3886,13 @@ h3 {
   }
 }
 
+.loader {
+  padding: 60px 0;
+  font-size: 12px;
+  color: #555555;
+  text-align: center;
+}
+
 .slideshow {
   position: relative;
 }
