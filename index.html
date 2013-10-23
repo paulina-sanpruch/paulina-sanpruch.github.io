@@ -10,7 +10,7 @@ tab: portfolio
     </div>
 
     <section ng-repeat="category in posts" ng-cloak>
-        <h3 id="{[ category.name | hyphenate ]}">{[ category.name ]}</h3>
+        <h3 class="category" id="{[ category.name | hyphenate ]}">{[ category.name ]}</h3>
 
         <ul class="posts list-inline">
             <li class="post-item" ng-repeat="post in category.posts">

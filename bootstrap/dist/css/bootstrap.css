@@ -3566,7 +3566,7 @@ header {
 }
 
 #tab-content {
-  padding: 15px;
+  padding: 20px;
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -3692,10 +3692,10 @@ h3 {
   color: black;
 }
 
-.menu li.active > a,
-.menu li.active > a:active,
-.menu li.active > a:visited,
-.menu li.active > a:hover {
+.menu li.node.active > a,
+.menu li.node.active > a:active,
+.menu li.node.active > a:visited,
+.menu li.node.active > a:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -3872,6 +3872,10 @@ h3 {
   padding: 0;
 }
 
+.category {
+  margin-top: 0;
+}
+
 @media (min-width: 480px) and (max-width: 991px) {
   .posts {
     -webkit-column-count: 2;
@@ -3957,4 +3961,11 @@ figcaption {
   float: left;
   width: 40%;
   margin-right: 20px;
+}
+
+#img-phone {
+  width: 50%;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
 }

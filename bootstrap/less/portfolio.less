@@ -16,7 +16,7 @@ header {
     border: 1px solid #ddd;
     border-radius: @border-radius-base;
     background: white;
-    padding: 15px;
+    padding: @line-height-computed;
 }
 
 #tab-content.first-tab-active {
@@ -40,7 +40,7 @@ h3 {
     border-radius: 5px;
 
     padding: 0 !important;
-    margin: 10px 0;
+    margin: @line-height-computed/2 0;
 }
 
 .post-item-content, .post-item-content:visited {
@@ -124,7 +124,7 @@ h3 {
   }
 }
 
-.menu li.active > a {
+.menu li.node.active > a {
   &, &:active, &:visited, &:hover {
       background-color: rgba(255,255,255,0.7);
   }
@@ -343,7 +343,9 @@ h3 {
     padding: 0;
 }
 
-
+.category {
+  margin-top: 0;
+}
 
 .posts {
 
@@ -418,3 +420,9 @@ figcaption {
   margin-right: 20px;
 }
 
+#img-phone {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: @line-height-computed*3;
+}
