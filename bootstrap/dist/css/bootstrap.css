@@ -1808,16 +1808,16 @@ fieldset[disabled] .checkbox-inline {
 }
 
 .input-sm {
-  height: 30px;
+  height: 28px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
   border-radius: 3px;
 }
 
 select.input-sm {
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 28px;
 }
 
 textarea.input-sm {
@@ -2331,7 +2331,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-sm,
 .btn-xs {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -2489,7 +2489,7 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.428571429;
   color: #999999;
 }
@@ -3567,6 +3567,7 @@ header {
 
 #tab-content {
   padding: 20px;
+  margin-bottom: 20px;
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -3968,4 +3969,10 @@ figcaption {
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
+}
+
+footer {
+  font-size: 11px;
+  color: #555555;
+  text-align: center;
 }
