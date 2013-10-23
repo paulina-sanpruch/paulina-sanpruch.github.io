@@ -98,7 +98,9 @@ angular.module('portfolio', ['ngRoute']).
         return function(scope, element, attrs) {
             element.data('original', attrs.lazySrc);
             element.lazyload({
-                 effect : "fadeIn"
+                 effect : "fadeIn",
+                 failure_limit : 10,
+                 threshold : 200
             });
 
         }
