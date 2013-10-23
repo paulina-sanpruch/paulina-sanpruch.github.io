@@ -3828,6 +3828,7 @@ h3 {
   #nav-lastname {
     top: -98px;
     left: 219px;
+    z-index: 1;
     width: 189px;
     background: url(/images/site/lastname.png) top left no-repeat;
     -webkit-transition: all 0.4s ease-in-out;

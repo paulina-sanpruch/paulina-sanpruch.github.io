@@ -37,23 +37,25 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        banner: '<%= banner %><%= jqueryCheck %>',
+        banner: '',
         stripBanners: false
       },
       bootstrap: {
         src: [
-          'js/transition.js',
-          'js/alert.js',
-          'js/button.js',
-          'js/carousel.js',
-          'js/collapse.js',
-          'js/dropdown.js',
+      //    'js/transition.js',
+      //    'js/alert.js',
+     //     'js/button.js',
+     //     'js/carousel.js',
+     //     'js/collapse.js',
+     //     'js/dropdown.js',
+          'js/jquery.js',
           'js/modal.js',
-          'js/tooltip.js',
-          'js/popover.js',
+      //    'js/tooltip.js',
+       //   'js/popover.js',
           'js/scrollspy.js',
-          'js/tab.js',
-          'js/affix.js'
+      //    'js/tab.js',
+          'js/affix.js',
+          'js/angular.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
