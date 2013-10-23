@@ -1,9 +1,9 @@
 angular.module('portfolio', []).
-    config(function($interpolateProvider, $sceProvider){
+    config(['$interpolateProvider', '$sceProvider', function($interpolateProvider, $sceProvider){
         $interpolateProvider.startSymbol('{[').endSymbol(']}');
         $sceProvider.enabled(false);
-    }).
-    controller('Posts', function($scope, $http) {
+    }]).
+    controller('Posts', ['$scope', '$http', function($scope, $http) {
         //$scope.posts = posts.data;
         var postIdx, categoryIdx;
 
@@ -51,7 +51,7 @@ angular.module('portfolio', []).
             $(".modal").modal('hide');
             $scope.shown = null;
         }
-    }).
+    }]).
     directive('proportionalHeight', function() {
         return function(scope, element, attrs) {
             var ratio;

@@ -55,7 +55,8 @@ module.exports = function(grunt) {
           'js/scrollspy.js',
       //    'js/tab.js',
           'js/affix.js',
-          'js/angular.js'
+          'js/angular.js',
+          'js/portfolio.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
