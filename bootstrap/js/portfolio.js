@@ -80,6 +80,22 @@ angular.module('portfolio', []).
 
         }
     }).
+    directive('repeatFinished', function(){
+        return function link(scope, element, attr){
+            if(scope.$last){
+                scope.$emit('repeat-finished');
+            }
+        };
+    })
+    .directive('scrollspyRefresh', function(){
+        return function link(scope, element, attr){
+            scope.$on(attr.scrollspyRefresh, function(){
+                scope.$evalAsync(function() {
+                    $(document.body).scrollspy('refresh');
+                });
+            });
+        };
+    }).
     filter('hyphenate', function() {
       return function(s) { return s.replace(' ', '-')};
     });

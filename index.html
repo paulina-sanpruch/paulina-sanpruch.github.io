@@ -4,12 +4,12 @@ title: Paulina Sańpruch - Portfolio
 tab: portfolio
 ---
 
-<div ng-controller="Posts">
+<div ng-controller="Posts" scrollspy-refresh="repeat-finished">
     <div ng-if="!posts" class="loader">
         Loading portfolio items, please wait a moment...
     </div>
 
-    <section ng-repeat="category in posts" ng-cloak>
+    <section ng-repeat="category in posts" ng-cloak repeat-finished>
         <h3 class="category" id="{[ category.name | hyphenate ]}">{[ category.name ]}</h3>
 
         <ul class="posts list-inline">
