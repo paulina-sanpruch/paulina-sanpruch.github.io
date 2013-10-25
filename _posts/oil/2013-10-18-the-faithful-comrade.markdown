@@ -7,3 +7,5 @@ image: oil/theFaithfulComrade.jpg
 image_width: 689
 image_height: 500
 ---
+
+Juliusz Kossak's copy

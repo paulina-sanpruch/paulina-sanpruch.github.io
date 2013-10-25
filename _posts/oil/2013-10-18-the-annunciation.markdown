@@ -7,3 +7,5 @@ image: oil/theAnnunciation.jpg
 image_width: 667
 image_height: 600
 ---
+
+Fra Angelico's copy. The frame designed and created by me. Golden finish.
