@@ -4,6 +4,6 @@ title:  "In the doghouse"
 date:   2014-03-02 19:51:00
 categories: ['illustrations']
 image: illustrations/doghouse.jpg
-image_width: 568
+image_width: 567
 image_height: 400
 ---
